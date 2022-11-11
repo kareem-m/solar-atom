@@ -1,0 +1,191 @@
+@import "includes/var";
+
+%reverse {
+  div:nth-of-type(1) {
+    @media (min-width: 980px) {
+      grid-area: 1 / 2 / span 1 / span 1;
+      margin-left: 150px;
+    }
+  }
+  .information {
+    @media (min-width: 980px) {
+      grid-area: 1 / 1 / span 1 / span 1;
+    }
+  }
+}
+
+body {
+  background-color: $backgroundColor;
+  color: #fff;
+  font-family: "Chakra Petch", sans-serif;
+  overflow: hidden;
+  a {
+    color: #fff;
+  }
+  p {
+    color: #ccc !important;
+    @media (max-width: 450px) {
+      max-width: 85%;
+    }
+    @media (max-width: 370px) {
+      max-width: 75%;
+    }
+  }
+  section {
+    padding: 30px 0;
+    overflow: hidden;
+    &:not(:last-of-type) {
+      margin-bottom: 100px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      p {
+        font-size: 17px;
+        line-height: 1.7;
+      }
+      .planet {
+        border-radius: 50%;
+        background-repeat: repeat-x;
+        animation: animate 100s linear infinite;
+        margin-top: 50px;
+        position: relative;
+        @media (max-width: 990px) {
+          margin: 0 auto 50px !important;
+        }
+        @keyframes animate {
+          0% {
+            background-position: 0 0;
+          }
+          100% {
+            background-position: -2048px 0;
+          }
+        }
+        .moo {
+          background-repeat: repeat-x;
+          border-radius: 50%;
+          position: absolute;
+          box-shadow: inset 0 0 5px #000, 0 0 50px #7d717190;
+          animation: moon 250s linear infinite;
+          @keyframes moon {
+            0% {
+              background-position: 0 0;
+            }
+            100% {
+              background-position: -2048px 0;
+            }
+          }
+          &.moon1 {
+            top: 70px;
+            right: 115px;
+            @media (max-width: 800px) {
+              top: 108px;
+              right: 430px;
+            }
+          }
+          &.moon2 {
+            top: 450px;
+            right: 20px;
+            @media (max-width: 800px) {
+              top: 500px;
+              right: 310px;
+            }
+          }
+          &.moon3 {
+            top: 180px;
+            right: -80px;
+            @media (max-width: 800px) {
+              top: 380px;
+              right: 450px;
+            }
+          }
+        }
+      }
+      .information {
+        h1 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .meteors {
+    height: 480px;
+    width: 100%;
+    background: url(../img/meteors.png) center;
+    position: relative;
+    animation: meteorsAnimate 30s linear infinite;
+    &:not(:last-of-type) {
+      margin: -50px 0 50px;
+    }
+    @keyframes meteorsAnimate {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 852px 0;
+      }
+    }
+    span {
+      position: absolute;
+      font-size: 20px;
+      color: #ccc;
+      top: 100px;
+      left: 50px;
+      user-select: none;
+      z-index: -1;
+    }
+  }
+}
+// End Global values
+
+// Start Loading
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #131414;
+  z-index: 9999999999;
+  .spinner {
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    .cube1,
+    .cube2 {
+      background-color: $mainColor;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: sk-cubemove 1.8s infinite ease-in-out;
+    }
+    .cube2 {
+      animation-delay: -0.9s;
+    }
+    @keyframes sk-cubemove {
+      25% {
+        transform: translateX(42px) rotate(-90deg) scale(0.5);
+      }
+      50% {
+        transform: translateX(42px) translateY(42px) rotate(-179deg);
+      }
+      50.1% {
+        transform: translateX(42px) translateY(42px) rotate(-180deg);
+      }
+      75% {
+        transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+      }
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
+  }
+}
+
+// End Loading

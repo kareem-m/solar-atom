@@ -1,0 +1,40 @@
+{
+  "name": "solar-atom",
+  "version": "1.0.0",
+  "description": "solar-atom",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kareem-m/solar-atom.git"
+  },
+  "keywords": [
+    "solar-atom"
+  ],
+  "author": "Kareem Mohamed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kareem-m/solar-atom/issues"
+  },
+  "homepage": "https://github.com/kareem-m/solar-atom#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^4.0.2",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.49.9"
+  },
+  "dependencies": {
+    "static-server": "^2.2.1"
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 2%"
+  ]
+}
