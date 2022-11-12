@@ -4,7 +4,7 @@
 
 ## Preview
 
-Preview Website from [Here](https://kareem-m.github.io/Solar-Explore/).
+Preview Website from [Here](https://kareem-m.github.io/solar-atom/).
 
 ## Installation
 
