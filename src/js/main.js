@@ -88,3 +88,8 @@ window.addEventListener("load", function () {
   loading.style.display = "none";
   loading.parentElement.style.overflow = "auto";
 });
+
+setTimeout(() => {
+  loading.style.display = "none";
+  loading.parentElement.style.overflow = "auto";
+}, 4000);

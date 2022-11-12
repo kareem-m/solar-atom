@@ -1,7 +1,7 @@
 {
   "name": "solar-atom",
   "version": "1.0.0",
-  "description": "solar-atom",
+  "description": "Explore The Solar System",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/kareem-m/solar-atom.git"
   },
   "keywords": [
-    "solar-atom"
+    "solar atom", "solar system"
   ],
   "author": "Kareem Mohamed",
   "license": "MIT",
