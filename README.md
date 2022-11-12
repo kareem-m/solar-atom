@@ -1,4 +1,4 @@
-# Photography Portfolio Website
+# Solar Atom
 
 [Open in Visual Studio Code](https://vscode.dev/github/kareem-m/solar-atom)
 
